@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.sepamail.eu/xsd/bleedingEdge"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge"
+>
+
+  <annotation>
+    <documentation xml:lang="fr">
+      Message de réponse à l'inscription d'un nouvel intervenant :
+      acceptation ou refus de ses éléments cryptographiques,
+      communication des éléments crypto du serveur ...
+      (C) Copyright BPCE 2008-2011
+      $Revision: 148 $
+      $LastChangedDate:: 2012-06-25 16:16:44 +0200 #$
+    </documentation>
+  </annotation>
+
+  <include schemaLocation="type_sepa.xsd" />
+  <include schemaLocation="type_sepamail_general.xsd" />
+  <include schemaLocation="type_sepamail_message.xsd" />
+
+  <element name="EnrollReport"
+	   type="sem:sepamail_message_secure_enroll_report_001" />
+
+  <complexType name="sepamail_message_secure_enroll_report_001">
+    <sequence>
+      <element name="CreDtTm" type="sem:ISODateTime" />
+      <element name="SndrRef" />
+      <element name="Report" type="sem:KeyReport"
+	       minOccurs="1" maxOccurs="unbounded" />
+      <element name="OtherIdentif" type="sem:RIS2DIdentifier" 
+	       minOccurs="0" maxOccurs="1" />
+      <element name="CommunicationElement" type="sem:FamilyCertificate"
+	       minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="KeyReport">
+    <sequence>
+      <element name="CertifId" type="sem:Max35Text" />
+      <element name="Accepted" type="boolean" />
+      <element name="Reason" type="sem:Max140Text" minOccurs="0" maxOccurs="1" />
+    </sequence>
+  </complexType>
+
+</schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.sepamail.eu/xsd/bleedingEdge"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge"
+	xmlns:p09="urn:iso:std:iso:20022:tech:xsd:pain.009.001.01"
+>
+
+  <annotation>
+    <documentation xml:lang="fr">
+      Message du service Rubis, contenant l'acceptation ou le refus
+      d'inscription d'un tiers au service.
+      (C) Copyright BPCE 2008-2012
+      $Revision: 158 $
+      $LastChangedDate:: 2012-07-24 17:30:28 +0200 #$
+    </documentation>
+  </annotation>
+
+  <include schemaLocation="type_sepa.xsd" />
+  <include schemaLocation="type_sepamail_payment.xsd" />
+
+  <import schemaLocation="pain.009.001.01.xsd"
+	  namespace="urn:iso:std:iso:20022:tech:xsd:pain.009.001.01" />
+
+  <element name="EnrollReply"
+	   type="sem:sepamail_message_payment_activation_enroll_001" />
+
+  <complexType name="sepamail_message_payment_activation_enroll_001">
+    <sequence>
+      <element name="CreDtTm" type="sem:ISODateTime" />
+      <element name="CdtrICQX" type="sem:ICQX" />
+      <element name="DbtrName" type="sem:Max70Text" />
+      <element name="DbtrDsplName" type="sem:Max70Text" />
+      <element name="DbtrAcct" type="p09:CashAccount16"/>
+      <element name="DbtrAgt" type="p09:BranchAndFinancialInstitutionIdentification4"/>
+      <element name="CustRef" type="sem:Max70Text"
+	       minOccurs="1" maxOccurs="3" />
+
+      <element name="MyPmtMtd" type="sem:PaymentMethodAndId"
+	       minOccurs="0" />
+      <element name="CommCond" type="sem:CommunicationConditions"
+	       minOccurs="0" />
+
+    </sequence>
+  </complexType>
+</schema>

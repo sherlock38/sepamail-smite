@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.sepamail.eu/xsd/bleedingEdge"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge"
+	xmlns:p09="urn:iso:std:iso:20022:tech:xsd:pain.009.001.01"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+>
+
+  <annotation>
+    <documentation xml:lang="fr">
+      Message d'information sur l'inscription d'un nouveau
+      participant, transmission de ses éléments crypto. A priori
+      réservé au scheme manager.
+      (C) Copyright BPCE 2008-2011
+      $Revision: 171 $
+      $LastChangedDate:: 2012-08-31 09:49:27 +0200 #$
+    </documentation>
+  </annotation>
+
+  <include schemaLocation="type_sepa.xsd" />
+  <include schemaLocation="type_sepamail_general.xsd" />
+  <include schemaLocation="type_sepamail_message.xsd" />
+  <include schemaLocation="type_sepamail_qxcard.xsd" />
+
+  <import schemaLocation="pain.009.001.01.xsd" namespace="urn:iso:std:iso:20022:tech:xsd:pain.009.001.01" />
+
+  <element name="EnrollAdvise"
+	   type="sem:sepamail_message_secure_enroll_advise_001" />
+
+  <complexType name="sepamail_message_secure_enroll_advise_001">
+    <annotation>
+      <documentation xml:lang="fr">
+	Les elements (identifiant, certificat, famille) se trouvent
+	dans le ou les elements CommunicationElement
+      </documentation>
+    </annotation>
+    <sequence>
+      <element name="CreDtTm" type="sem:ISODateTime" />
+      <element name="Sndr" type="p09:PartyIdentification32" />
+      <element name="SndrBIC" type="sem:AnyBICIdentifier" />
+      <element name="CdtrQxCard" type="sem:qxCard" />
+      <element name="CommunicationElement" type="sem:FamilyCertificate"
+	       minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+</schema>

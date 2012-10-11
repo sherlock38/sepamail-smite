@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.sepamail.eu/xsd/bleedingEdge"
+	elementFormDefault="qualified"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge"
+>
+
+  <annotation>
+    <documentation xml:lang="fr">
+      Types utilisés dans l'écosystème identification.verification de Sepamail
+      (C) Copyright BPCE 2008-2012
+      $Revision: 144 $
+      $LastChangedDate:: 2012-06-11 12:24:48 +0200 #$
+    </documentation>
+  </annotation>
+
+  <include schemaLocation="type_sepa.xsd" />
+  <include schemaLocation="type_sepamail_general.xsd" />
+
+  <simpleType name="TransactionType">
+    <restriction base="sem:Max16Text">
+      <enumeration value="in_transfer" />
+      <enumeration value="out_transfer" />
+    </restriction>
+  </simpleType>
+
+</schema>
