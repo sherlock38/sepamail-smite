@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sem:Missive version="1206"
+	xmlns:pain013="urn:iso:std:iso:20022:tech:xsd:pain.013.001.01"
+	xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.sepamail.eu/xsd/bleedingEdge ../../xsd/sepamail_missive.xsd">
+	<sem:sepamail_missive_001>
+		<sem:MsvId>sem:MsvId</sem:MsvId>
+		<sem:MsvTyp>Acquittement</sem:MsvTyp>
+		<sem:MsvOrd>1</sem:MsvOrd>
+		<sem:MsvPri>NORMAL</sem:MsvPri>
+		<sem:MsvHdr>
+			<sem:Snd>
+				<sem:IBAN>QX62TESTBLEUXXX2345678923456789234</sem:IBAN>
+			</sem:Snd>
+			<sem:SndDtTm>2012-09-21T15:00:00</sem:SndDtTm>
+			<sem:Rcv>
+				<sem:IBAN>QX46TESTVERTXXXABCDEFGHJKLMNPQRSTU</sem:IBAN>
+			</sem:Rcv>
+			<sem:RcvDtTm>2012-09-21T15:01:13</sem:RcvDtTm>
+		</sem:MsvHdr>
+		<sem:MsvAcq>
+			<sem:AcqSta>ACK</sem:AcqSta>
+			<sem:AcqCla>2</sem:AcqCla>
+			<sem:AcqSub>1</sem:AcqSub>
+			<sem:AcqDet>9</sem:AcqDet>
+			<sem:AcqChk>sha1:136b42af3329762f529aa35d8ba039cbe96dcf7c</sem:AcqChk>
+			<sem:AcqDes>Success - No warning</sem:AcqDes>
+		</sem:MsvAcq>
+	</sem:sepamail_missive_001>
+</sem:Missive>				
