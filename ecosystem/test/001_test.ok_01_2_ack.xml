@@ -19,7 +19,7 @@
 		</sem:MsvHdr>
 		<sem:MsvAcq>
 			<sem:AcqSta>ACK</sem:AcqSta>
-			<sem:AcqChk>sha1:44d202a8e84354c5955e0d83da49b93fb65e8ecd</sem:AcqChk>
+			<sem:AcqChk>sha1:9df33c0c9bd733580167c4965143470c8f8a5683</sem:AcqChk>
 		</sem:MsvAcq>
 	</sem:sepamail_missive_001>
 </sem:Missive>				
