@@ -12,11 +12,10 @@
 			<sem:Snd>
 				<sem:IBAN>QX62TESTBLEUXXX2345678923456789234</sem:IBAN>
 			</sem:Snd>
-			<sem:SndDtTm>2012-09-21T15:00:00</sem:SndDtTm>
+			<sem:SndDtTm>2012-09-21T15:01:00</sem:SndDtTm>
 			<sem:Rcv>
 				<sem:IBAN>QX46TESTVERTXXXABCDEFGHJKLMNPQRSTU</sem:IBAN>
 			</sem:Rcv>
-			<sem:RcvDtTm>2012-09-21T15:01:13</sem:RcvDtTm>
 		</sem:MsvHdr>
 		<sem:MsvAcq>
 			<sem:AcqSta>ACK</sem:AcqSta>
