@@ -1,0 +1,13 @@
+----------------------
+ecosystem test
+MSO 20121019 1600
+readme
+----------------------
+
+
+Description du contenu du répertoire
+------------------------------------
+
+src les messages sources des missives tests
+xsl des transformations xsl utiles dans ce contexte
+les jeux de test préfixés par numéro de jeu selon la norme de nommage (voir fichier readme global)

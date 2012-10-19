@@ -2,7 +2,7 @@
 <sem:Report xmlns:sem="http://www.sepamail.eu/xsd/bleedingEdge"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.sepamail.eu/xsd/bleedingEdge ../../../xsd/sepamail_message_test_SimpleTestReport.xsd ">
-	<sem:TestId>sem:TestId002</sem:TestId>
+	<sem:TestId>sem:TestId001</sem:TestId>
 	<sem:Text>This is a test</sem:Text>
 	<sem:Data>
 <![CDATA[iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAAXNSR0IArs4c6QAAAGZJREFUGNNV
